@@ -244,17 +244,6 @@
             <!-- The start_time should be in UTC format(14:30:00) (so that auto close of visit will be done at 8pm IST )-->
         </sql>
     </changeSet>
-    <changeSet id="BAH-2336-202209220305" author="Clinic-Config">
-        <preConditions onFail="MARK_RAN">
-            <sqlCheck expectedResult="1">
-                select count(*) from role_privilege where role = 'SuperAdmin' and privilege = 'app:adt' ;
-            </sqlCheck>
-        </preConditions>
-        <comment>Removing app:adt privilege from SuperAdmin role</comment>
-        <sql>
-            delete from role_privilege where role = 'SuperAdmin' and privilege = 'app:adt';
-        </sql>
-    </changeSet>
     <changeSet id="BAH-2348-202305181800" author="Clinic-Config">
         <preConditions onFail="MARK_RAN">
             <sqlCheck expectedResult="1">
