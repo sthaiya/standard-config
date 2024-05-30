@@ -12,7 +12,7 @@ metadata:
 
 image:
   repository: bahmni
-  name: default-config
+  name: standard-config
   tag: latest
 
 volumes:
