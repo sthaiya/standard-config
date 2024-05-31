@@ -15,6 +15,7 @@ on:
       - master
       - 'release-*'
       - BAH-3894
+  workflow_dispatch:
 
 jobs:
   build-publish-docker-helm:
@@ -45,7 +46,7 @@ jobs:
           file: package/docker/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: bahmni/default-config:${{env.ARTIFACT_VERSION}},bahmni/default-config:latest
+          tags: bahmni/standard-config:${{env.ARTIFACT_VERSION}},bahmni/standard-config:latest
       - name: Push Translations to Transifex
         run: |
           curl -o transifex.sh https://raw.githubusercontent.com/Bahmni/bahmni-infra-utils/main/transifex.sh
@@ -74,7 +75,7 @@ jobs:
           persist-credentials: false
 
       - name: Copy Helm Archive
-        run: mkdir -p helm-charts/default-config/ && cp default-config-${{ env.ARTIFACT_VERSION }}.tgz helm-charts/default-config/
+        run: mkdir -p helm-charts/standard-config/ && cp standard-config-${{ env.ARTIFACT_VERSION }}.tgz helm-charts/standard-config/
 
       - name: Helm Index
         working-directory: helm-charts/
@@ -86,5 +87,5 @@ jobs:
           git config user.name ${{ secrets.BAHMNI_USERNAME}}
           git config user.email ${{ secrets.BAHMNI_EMAIL}}
           git add .
-          git commit -m "Release of default-config-${{ env.ARTIFACT_VERSION }}"
+          git commit -m "Release of standard-config-${{ env.ARTIFACT_VERSION }}"
           git push 'https://${{ secrets.BAHMNI_USERNAME}}:${{ secrets.BAHMNI_PAT}}@github.com/bahmni/helm-charts.git' gh-pages
