@@ -196,7 +196,38 @@
     "label": "Medications",
     "translationKey":"MEDICATIONS_BOARD_LABEL_KEY",
     "extensionParams":{
-      "tabConfigName": "allMedicationTabConfig"
+      "tabConfigName": "allMedicationTabConfig",
+      "sections": {
+        "nutritionalValues":{  
+          "translationKey": "DASHBOARD_TITLE_NUTRITIONAL_VALUES_KEY",
+          "type": "observation",
+          "isObservation": true,
+          "displayOrder": 1,
+          "dashboardConfig": {  
+            "conceptNames":[  
+              "Height (cm)",
+              "Weight (kg)"
+            ],
+            "showDetailsButton": true
+          },
+          "expandedViewConfig": {  
+            "conceptNames":[  
+              "Height (cm)",
+              "Weight (kg)",
+              "Body mass index",
+              "BMI STATUS"
+            ],
+            "scope": "latest",
+            "showDetailsButton": true,
+            "pivotTable": {}
+          },
+          "hideEmptyDisplayControl": true
+        },
+        "allergies": {
+          "type": "allergies",
+          "displayOrder": 2
+        }
+      }
     },
     "url": "treatment",
     "icon": "fa-user-md",
