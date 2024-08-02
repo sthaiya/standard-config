@@ -92,6 +92,7 @@
       "refreshKey": 6
     }
   ],
+  "nonMedicationTaskTypes": ["Measurement procedure", "Medication administration assessment", "Multidisciplinary assessment"],
   "nursingTasks": {
     "timeInMinutesFromNowToShowTaskAsRelevant": 30,
     "timeInMinutesFromNowToShowPastTaskAsLate": 60,
