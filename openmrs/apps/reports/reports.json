@@ -97,6 +97,11 @@
       ]
     }
   },
+  "patientReport": {
+    "name": "Patient Information",
+    "type": "PatientReport",
+    "requiredPrivilege": "app:reports"
+  },
   "IPDPatientsReport": {
     "name": "IPD Patients Report",
     "type": "ipdPatients",
