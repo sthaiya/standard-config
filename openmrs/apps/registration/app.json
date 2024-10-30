@@ -29,13 +29,6 @@
                 "additionalPatientInformation": {
                     "title": "Additional Patient Information",
                     "attributes": [
-                        "distanceFromCenter",
-                        "isUrban",
-                        "cluster",
-                        "RationCard",
-                        "familyIncome",
-                        "debt",
-                        "cluster",
                         "email"
                     ]
                 },
@@ -46,7 +39,8 @@
                 },
                 "defaults":  {
                     "class": "General",
-                    "landHolding": 2
+                    "landHolding": 2,
+                    "country":"Kenya",
                 }
             },
             "addressHierarchy": {
@@ -59,7 +53,7 @@
             },
 
             "autoCompleteFields":["familyName", "caste"],
-            "defaultIdentifierPrefix": "GAN",
+            "defaultIdentifierPrefix": "TNS",
             "defaultVisitType": "OPD",
             "searchByIdForwardUrl": "/patient/{{patientUuid}}",
             "showMiddleName": true,
@@ -67,7 +61,7 @@
             "isLastNameMandatory": true,
             "patientNameDisplayOrder": ["firstName", "middleName", "lastName"],
             "showSaveConfirmDialog": false,
-            "showBirthTime": true,
+            "showBirthTime": false,
             "showCasteSameAsLastNameCheckbox": false,
             "printOptions": [
                 {
@@ -119,6 +113,7 @@
                     "fields": ["phoneNumber","alternatePhoneNumber"]
                 }
             },
+            "afterVisitSaveForwardUrl" : "../clinical/index.html#/default/patient/{{patientUuid}}/dashboard/orders",
             "addressHierarchy": {
                 "showAddressFieldsTopDown": false,
                 "strictAutocompleteFromLevel": "postalCode"
