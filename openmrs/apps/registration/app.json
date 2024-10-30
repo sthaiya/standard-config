@@ -40,7 +40,7 @@
                 "defaults":  {
                     "class": "General",
                     "landHolding": 2,
-                    "country":"Kenya",
+                    "country":"Kenya"
                 }
             },
             "addressHierarchy": {
