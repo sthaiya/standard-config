@@ -42,5 +42,17 @@
         },
         "order": 1,
         "requiredPrivilege": "Edit Visits"
+    },
+    "registrationSecondPage":{
+        "id": "bahmni.registration.conceptSetGroup.registrationSecondPage",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "forms",
+        "extensionParams": {
+            "formName": "Registration Details",
+            "conceptNames": ["Height (cm)","Weight (Kg)","Body mass index","BMI Status"],
+            "showLatest": true
+        },
+        "order": 3,
+        "requiredPrivilege": "Edit Visits"
     }
 }
