@@ -31,18 +31,6 @@
         "order": 1,
         "requiredPrivilege": "View Patients"
     },
-    "feeInformation":{
-        "id": "bahmni.registration.conceptSetGroup.feeInformation",
-        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
-        "type": "config",
-        "extensionParams": {
-            "conceptName": "Fee Information",
-            "translationKey": "FEE_INFORMATION_LOCALE_KEY",
-            "required":true
-        },
-        "order": 1,
-        "requiredPrivilege": "Edit Visits"
-    },
     "registrationSecondPage":{
         "id": "bahmni.registration.conceptSetGroup.registrationSecondPage",
         "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
@@ -53,6 +41,19 @@
             "showLatest": true
         },
         "order": 3,
+        "requiredPrivilege": "Edit Visits"
+    },
+    "feeInformation":{
+        "id": "bahmni.registration.conceptSetGroup.feeInformation",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "config",
+        "label": "Fee Payment Information",
+        "extensionParams": {
+            "conceptName": "Fee Information",
+            "translationKey": "FEE_INFORMATION_LOCALE_KEY",
+            "required":true
+        },
+        "order": 1,
         "requiredPrivilege": "Edit Visits"
     }
 }
