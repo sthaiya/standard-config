@@ -40,7 +40,7 @@
             "conceptNames": ["Height (cm)","Weight (Kg)","Body mass index","BMI Status"],
             "showLatest": true
         },
-        "order": 3,
+        "order": 2,
         "requiredPrivilege": "Edit Visits"
     },
     "feeInformation":{
@@ -53,7 +53,7 @@
             "translationKey": "FEE_INFORMATION_LOCALE_KEY",
             "required":true
         },
-        "order": 1,
+        "order": 3,
         "requiredPrivilege": "Edit Visits"
     }
 }
